@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" data-beasties-container>
+<head>
+  <meta charset="utf-8">
+  <title>simple map v2</title>
+  <base href="/simple-map-v2-angular/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="map-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    // Redirect 404s to the index page with the request path in a parameter
+    (function(){
+      var currentLocation = location.pathname.replace(/\/$/, '');
+      if (!currentLocation.match(/^\/simple-map-v2-angular/) && currentLocation !== '') {
+        location.href = '/simple-map-v2-angular/?' + currentLocation;
+      }
+    })();
+  </script>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
